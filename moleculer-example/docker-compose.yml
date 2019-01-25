@@ -5,15 +5,15 @@ services:
   api:
     build:
       context: .
-    image: moleculer-example
+    image: moleculer-first
     env_file: docker-compose.env
     environment:
       SERVICES: api
       PORT: 3000
     links:
-      - nats
+      - redis
     depends_on:
-      - nats
+      - redis
     labels:
       - "traefik.enable=true"   
       - "traefik.backend=api"
@@ -24,18 +24,18 @@ services:
   greeter:
     build:
       context: .
-    image: moleculer-example
+    image: moleculer-first
     env_file: docker-compose.env
     environment:
       SERVICES: greeter
     links:
-      - nats
+      - redis
     depends_on:
-      - nats
+      - redis
 
 
-  nats:
-    image: nats
+  redis:
+    image: redis:alpine
 
   traefik:
     image: traefik

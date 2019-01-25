@@ -1,13 +1,16 @@
 {
-  "name": "moleculer-example",
+  "name": "moleculer-first",
   "version": "1.0.0",
   "description": "My Moleculer microservices project",
   "scripts": {
     "dev": "moleculer-runner --repl --hot services",
     "start": "moleculer-runner",
+    "cli": "moleculer connect Redis",
     "ci": "jest --watch",
     "test": "jest --coverage",
-    "lint": "eslint services"
+    "lint": "eslint services",
+    "dc:up": "docker-compose up --build -d",
+    "dc:down": "docker-compose down"
   },
   "keywords": [
     "microservices",
@@ -15,15 +18,15 @@
   ],
   "author": "",
   "devDependencies": {
-    "eslint": "^5.12.1",
+    "eslint": "^5.10.0",
     "jest": "^23.6.0",
     "jest-cli": "^23.6.0",
-    "moleculer-repl": "^0.5.5"
+    "moleculer-repl": "^0.5.3"
   },
   "dependencies": {
-    "moleculer-web": "^0.8.5",
-    "nats": "^1.2.2",
-    "moleculer": "^0.13.5"
+    "moleculer-web": "^0.8.0",
+    "ioredis": "^4.2.0",
+    "moleculer": "^0.13.0"
   },
   "engines": {
     "node": ">= 8.x.x"
