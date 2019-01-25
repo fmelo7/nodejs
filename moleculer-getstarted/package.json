@@ -10,6 +10,7 @@
   "author": "Francisco Melo <fmelo7@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "merge": "^1.2.1",
     "moleculer": "^0.13.5"
   }
 }
