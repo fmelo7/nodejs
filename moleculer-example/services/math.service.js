@@ -20,8 +20,21 @@ module.exports = {
 		/**
 		 *
 		 */
-		add(ctx) {
-			return "Add " + Number(5) + Number(3) + " = 8";
+		testAdd(ctx) {
+			return "Add " + Number(5) + " + " + Number(3) + " = 8";
+		},
+
+		/**
+		 *
+		 */
+		add: {
+			params: {
+				a: "string",
+				b: "string"
+			},
+			handler(ctx) {
+				return "Add = " + (Number(ctx.params.a) + Number(ctx.params.b));
+			}
 		}
 	},
 
