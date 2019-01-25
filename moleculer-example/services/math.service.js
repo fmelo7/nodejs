@@ -1,7 +1,7 @@
 "use strict";
 
 module.exports = {
-	name: "greeter",
+	name: "math",
 
 	/**
 	 * Service settings
@@ -18,26 +18,10 @@ module.exports = {
 	 */
 	actions: {
 		/**
-		 * Say a 'Hello'
 		 *
-		 * @returns
 		 */
-		hello() {
-			return "Hello Moleculer";
-		},
-
-		/**
-		 * Welcome a username
-		 *
-		 * @param {String} name - User name
-		 */
-		welcome: {
-			params: {
-				name: "string"
-			},
-			handler(ctx) {
-				return `Welcome, ${ctx.params.name}`;
-			}
+		add(ctx) {
+			return "Add " + Number(5) + Number(3) + " = 8";
 		}
 	},
 
