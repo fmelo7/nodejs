@@ -18,16 +18,16 @@
   ],
   "author": "",
   "devDependencies": {
-    "eslint": "^5.12.1",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "jest": "^24.0.0",
-    "jest-cli": "^24.0.0",
-    "moleculer-repl": "^0.5.5"
+    "eslint": "^6.2.2",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "jest": "^24.9.0",
+    "jest-cli": "^24.9.0",
+    "moleculer-repl": "^0.5.7"
   },
   "dependencies": {
-    "moleculer-web": "^0.8.5",
-    "ioredis": "^4.5.1",
-    "moleculer": "^0.13.5"
+    "ioredis": "^4.14.0",
+    "moleculer": "^0.13.10",
+    "moleculer-web": "^0.8.5"
   },
   "engines": {
     "node": ">= 8.x.x"
